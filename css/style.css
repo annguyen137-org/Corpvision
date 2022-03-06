@@ -1,0 +1,31 @@
+:root {
+  --primary-color: #009f4d;
+  --text-color: #666666;
+  --white-color: #ffffff;
+  --bg-color: #ffffff;
+  --section-bg-color: #f7f7f7;
+  --heading-color: #3f3a64;
+  --small-heading-color: #7e7d7d;
+  --border-color: transparent;
+  --border-radius: 8px;
+  --dropdown-color: #ffffff;
+}
+[data-theme="dark"] {
+  --primary-color: #009f4d;
+  --text-color: #c2c2c2;
+  --bg-color: #ffffff;
+  --section-bg-color: #100f19;
+  --heading-color: #eeeeee;
+  --border-color: rgba(255, 255, 255, 0.2);
+  --dropdown-color: #151421;
+}
+
+/* set .container when screen >= 1280px */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+body {
+  font-family: "Jost", sans-serif;
+}

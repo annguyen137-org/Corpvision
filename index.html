@@ -90,7 +90,7 @@
 		</div>
 
 		<!-- START: HEADER SECTION -->
-		<header class="header">
+		<header id="site-header" class="header">
 			<div class="container">
 				<nav class="navbar navbar-expand-lg bg-transparent navbar-dark">
 					<!-- Brand -->
@@ -103,12 +103,16 @@
 
 					<!-- Toggler/collapsible Button -->
 					<button
+						id="btnTogglerIcon"
 						class="navbar-toggler"
 						type="button"
 						data-toggle="collapse"
 						data-target="#collapsibleNavbar"
 					>
-						<span class="navbar-toggler-icon"></span>
+						<span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+						<span
+							class="navbar-toggler-icon fa icon-close fa-times d-none"
+						></span>
 					</button>
 
 					<!-- Navbar links -->
@@ -363,11 +367,19 @@
 				slidesToShow: 1,
 				slidesToScroll: 1,
 				autoplay: true,
+				responsive: [
+					{
+						breakpoint: 768,
+						settings: {
+							autoplay: false,
+						},
+					},
+				],
 			});
 		</script>
 
 		<!-- Header on scroll -->
-		<!-- <script>
+		<script>
 			$(function () {
 				$(window).on("scroll", function () {
 					if ($(window).scrollTop() > 50) {
@@ -377,6 +389,6 @@
 					}
 				});
 			});
-		</script> -->
+		</script>
 	</body>
 </html>

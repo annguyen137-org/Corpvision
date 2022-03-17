@@ -53,3 +53,58 @@ document.getElementById("btnTogglerIcon").onclick = function () {
 	$("#site-header").toggleClass("active");
 	$("body").toggleClass("noscroll");
 };
+
+// Slick carousel
+$(".carousel__slider").slick({
+	dots: false,
+	infinite: true,
+	speed: 1000,
+	slidesToShow: 1,
+	slidesToScroll: 1,
+	autoplay: true,
+	responsive: [
+		{
+			breakpoint: 768,
+			settings: {
+				autoplay: false,
+			},
+		},
+	],
+});
+
+// Header on scroll
+$(function () {
+	$(window).on("scroll", function () {
+		if ($(window).scrollTop() > 50) {
+			$(".header").addClass("nav-fixed");
+		} else {
+			$(".header").removeClass("nav-fixed");
+		}
+	});
+});
+
+// Testimonial slider script using owlcarousel
+$(document).ready(function () {
+	$(".owl-carousel").owlCarousel({
+		loop: true,
+		margin: 10,
+		dots: true,
+		nav: false,
+		responsiveClass: true,
+		responsive: {
+			0: {
+				items: 1,
+				nav: false,
+			},
+			768: {
+				items: 1,
+				nav: false,
+			},
+			1000: {
+				items: 1,
+				nav: false,
+				loop: false,
+			},
+		},
+	});
+});

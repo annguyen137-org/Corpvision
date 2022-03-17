@@ -3,7 +3,7 @@
   var backTop = document.getElementsByClassName("js-cd-top")[0],
     offset = 300, // browser window scroll (in pixels) after which the "back to top" link is shown
     offsetOpacity = 1200, //browser window scroll (in pixels) after which the "back to top" link opacity is reduced
-    scrollDuration = 2000,
+    scrollDuration = 700,
     scrolling = false;
 
   if (backTop) {
@@ -11,9 +11,7 @@
     window.addEventListener("scroll", function (event) {
       if (!scrolling) {
         scrolling = true;
-        !window.requestAnimationFrame
-          ? setTimeout(checkBackToTop, 250)
-          : window.requestAnimationFrame(checkBackToTop);
+        !window.requestAnimationFrame ? setTimeout(checkBackToTop, 250) : window.requestAnimationFrame(checkBackToTop);
       }
     });
 

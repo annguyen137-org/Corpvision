@@ -5,6 +5,8 @@ document.getElementById("toggle-right-sidebar").onclick = function () {
 	);
 	// Show/hide sidebar on click
 	$("#right-sidebar").toggleClass("hide-sidebar");
+	$("#right-sidebar sidebar__content").toggleClass("animate__animated");
+	$("#right-sidebar sidebar__content").toggleClass("animate__fadeInRight");
 };
 
 // Add class "search-active" when search btn clicked
@@ -47,9 +49,6 @@ document.getElementById("mode-switch").onclick = function () {
 
 document.getElementById("btnTogglerIcon").onclick = function () {
 	$("#btnTogglerIcon span").toggleClass("d-none");
-};
-
-document.getElementById("btnTogglerIcon").onclick = function () {
 	$("#site-header").toggleClass("active");
 	$("body").toggleClass("noscroll");
 };
